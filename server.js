@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://blog-frontend-ten-peach.vercel.app"], // allow only these origins
+  origin: ["http://localhost:5173", "https://nursblog.vercel.app", "https://blog-frontend-rust-six.vercel.app/"], // allow only these origins
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true, // if you want to allow cookies/auth headers
 };
