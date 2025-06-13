@@ -59,7 +59,7 @@ export const deleteBlog = async (req, res) => {
 };
 export const getMyBlogs = async (req, res) => {
   try {
-    const blogs = await Blog.find({ author: req.user.id }).sort({ createdAt: -1 });
+    const blogs = await Blog.find({ author: req.user.id }).sort({ createdAt: -1 }).populate("author", "username");;
     res.status(200).json(blogs);
   } catch (err) {
     res.status(500).json({ message: "Failed to fetch your blogs", error: err });
